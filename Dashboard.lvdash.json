@@ -1,0 +1,76 @@
+{
+  "datasets": [
+    {
+      "name": "f7dfc1c6",
+      "displayName": "Construction Project Duration and Labor Dataset",
+      "queryLines": [
+        "SELECT Task_Duration_Days, Labor_Required\r\n",
+        "FROM turner_db.production.construction"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "f71762fc",
+      "displayName": "Constuction data",
+      "layout": [
+        {
+          "widget": {
+            "name": "81fbe57f",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f7dfc1c6",
+                  "fields": [
+                    {
+                      "name": "Labor_Required",
+                      "expression": "`Labor_Required`"
+                    },
+                    {
+                      "name": "Task_Duration_Days",
+                      "expression": "`Task_Duration_Days`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "Labor_Required",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "Task_Duration_Days",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 4
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
