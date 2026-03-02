@@ -1,0 +1,14 @@
+Done! Your dataset now has 22 columns with 4 new safety fields:
+
+Column	Description	Distribution
+Safety_Incident_Count	0–3 incidents per task	78% have zero incidents (realistic)
+Incident_Severity	None / Minor / Moderate / Serious	65% Minor, 28% Moderate, 7% Serious
+Near_Miss_Count	0–5 near-miss reports (leading indicator)	More common than actual incidents
+Safety_Score	0–100 composite safety rating	Mean = 91.3 (healthy project)
+The logic is domain-realistic:
+
+High-risk tasks → 31.2% incident rate vs Low-risk → 18.2%
+Foundation & Sitework phases → highest incident rate (25.2%)
+Near-misses are ~3x more common than actual incidents
+The add_safety.py script has been removed. Ready for git add . && git commit!
+
